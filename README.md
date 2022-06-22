@@ -11,6 +11,12 @@
 - The password is copied to the transient clipboard.
 - Allow to cache the keys to a file. Default `disabled`
 
+## 修改内容
+
+原版本密码查询，如果使用`Alfred filters results`，无法模糊查询；使用`{query}`查询又特别卡，所以用`python`重写了`listDatabase.sh`的逻辑，支持快速模糊查询。
+
+如需使用，根据实际修改`listDatabase.py`中的`python`路径并给其可执行权限(`chmod +x`)，将原来的`listDatabase`修改为`./listDatabase.py {query}`。
+
 ## Setup
 
 #### Prerequisites
